@@ -404,3 +404,40 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.bcf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+
+# Temporary files
+*~
+
+# Ignore all image formats except PNG and JPEG
+!*.png
+!*.jpg
+!*.jpeg
+*.eps
+*.pdf_tex
+*.svg
+
+# Ignore all files except main files and references
+!main.tex
+!main.pdf
+!references.bib
+
+# Allow papers folder and its contents
+!/papers/
