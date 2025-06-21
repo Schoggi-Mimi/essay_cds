@@ -1,0 +1,187 @@
+\documentclass[a4paper, chapterprefix=true, numbers=noenddot]{scrreprt}
+
+\usepackage[a4paper,
+            top=2cm,
+            bottom=2cm,
+            left=2.5cm,
+            right=2.5cm]{geometry}
+
+% (Possibly remove if you're on a modern TeX system)
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % If needed
+
+% Fonts
+\usepackage[scaled]{helvet} % for Helvetica
+\renewcommand{\familydefault}{\sfdefault} % Helvetica as default
+
+% KOMA/hacks
+\usepackage{scrhack}
+%\usepackage{geometry} % Use either geometry OR the KOMA options above
+
+% Tables
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+
+% Lists
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+% Subfigures, PDF inclusion
+\usepackage{subcaption}
+\usepackage{pdfpages}
+
+% Abstract
+\usepackage{abstract}
+
+% Table of contents custom
+\usepackage{tocloft}
+
+% Math & Symbols
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{pifont}
+
+% Language/quotations
+\usepackage{csquotes}
+
+% Page rotation
+\usepackage{pdflscape}
+
+% Positioning text blocks
+\usepackage[absolute]{textpos}
+
+% Time/date
+\usepackage{datetime}
+
+% BibLaTeX with APA
+\usepackage[
+  backend=biber,
+  style=apa,
+  citestyle=apa,
+  natbib=true
+]{biblatex}
+\addbibresource{references.bib}
+
+% Hyperref last-ish
+\usepackage{xurl}
+\usepackage[
+  breaklinks,
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+]{hyperref}
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Subsection}
+
+% Optional: microtype for better typography
+\usepackage{microtype}
+
+% Fancy headers/footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headsep}{0.5cm}
+\fancyfoot[C]{\thepage\hspace{1.5cm}}
+
+% Additional
+\usepackage{comment}
+
+% Custom column width
+\newlength{\gridimagewidth}
+\setlength{\gridimagewidth}{3cm}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \begin{flushright}
+        \includegraphics[width=5.5cm]{university_logo.png} % Adjust width as needed
+    \end{flushright}
+    \centering
+    \vspace{2cm}
+    {\Large\textbf{Clinical Visit Report}}\\[0.5cm]
+    
+    % Define row coloring
+    \definecolor{lightgray}{gray}{0.9}
+    
+    % Information Table
+    \noindent
+    \renewcommand{\arraystretch}{1.9}
+    \begin{longtable}{|p{7cm}|p{7cm}|}
+        \hline
+        \rowcolor{lightgray} \textbf{Last Name:} Nyungmartsang & \textbf{First Name:} Choekyel \\
+        \hline
+        \rowcolor{lightgray} \multicolumn{2}{|l|}{\textbf{Immatriculation Number:} 21-876-693} \\
+        \hline
+        \rowcolor{lightgray} \multicolumn{2}{|l|}{\textbf{Semester:} FS 2025} \\
+        \hline
+        \rowcolor{lightgray} \multicolumn{2}{|l|}{\textbf{Date of Visit:} 28.03.2025} \\
+        \hline
+        \rowcolor{lightgray} \multicolumn{2}{|l|}{\textbf{Department:} Diagnostic and Interventional Neuroradiology} \\
+        \hline
+        \rowcolor{lightgray} \multicolumn{2}{|l|}{\textbf{Host(s) at Department:} Roland Wiest, Johannes Kaesmacher, Piotr Radojewski} \\
+        \hline
+    \end{longtable}
+\end{titlepage}
+
+% Start of Questions Section on Page 2
+\newpage
+% Text.\autocite{SCIN}
+% \par
+% \vspace{\baselineskip}
+% \noindent
+\section*{1. Describe the key elements of your visit}
+
+\subsection*{1.1 Units visited:}
+During the visit, we first explored the Neuro-Angiography area with two active intervention rooms, followed by the CT Imaging Unit where scanning and image analysis were carried out. Next, we received a demonstration of Calantic Digital Solutions, a cloud-based platform that offers various AI-supported imaging apps. Finally, we visited the Translational Imaging Center, where we saw the 3 tesla and 7 tesla MRI scanners and learned about ongoing research using MRI and deep learning. \par
+
+\subsection*{1.2 Purpose of the units:} 
+The Neuro-Angiography unit is used for minimally invasive procedures to treat conditions like strokes and aneurysms by navigating through the brain and spinal vessels. The CT and MRI units are important for diagnosing stroke and other neurological diseases. CT is used for fast imaging, while MRI provides more detailed views for closer examination. The Translational Imaging Center carries out research to make medical imaging more accurate and efficient, with a focus on AI-based methods among other areas. \par
+
+\subsection*{1.3 Clinical workflow within the units:} 
+In Neuro-Angiography, doctors guide a catheter from the leg artery to the brain using live imaging displayed on a screen. These real-time images are created through low-dose radiation, which is activated with a foot pedal, allowing the medical team to track the catheter’s movement as it travels through the vessels. During our visit, a resident had difficulty navigating the catheter, and the senior doctor assisting us had to intervene. This gave us a clear view of the challenges that can occur during such procedures. \par
+\vspace{\baselineskip}
+\noindent
+In the surgical control room, staff used whiteboards to organize procedures, noting key information such as who was involved and what type of operation was planned. Some information was still shared manually, and we observed how overlapping schedules led to a consultation being delayed when both doctors were occupied in surgery. \par
+\vspace{\baselineskip}
+\noindent
+In the CT and MRI units, radiologists used the SECTRA system to review large volumes of 2D images to identify abnormalities. Although Calantic is normally part of this process, it was not functioning during our visit, so we did not see how it supports reporting. Reports were documented in EPIC, where radiologists retrieved imaging histories, reviewed scans, and dictated findings using voice recognition software, later reviewing and correcting the text. ChatGPT was also used by some doctors for grammar and spelling checks. Despite these tools, the process remains time-consuming and lacks a standardized structure.\par
+\vspace{\baselineskip}
+\noindent
+At the Translational Imaging Center, we were not able to observe the clinical workflow, as the scanners were undergoing maintenance by Siemens technicians on that day. \par
+
+\subsection*{1.4 AI-related research activities within the units:} 
+AI is increasingly used to support radiology tasks, such as detecting lesions, measuring tumors, and highlighting brain atrophy. Calantic Digital Solutions provides access to various AI apps designed to speed up image analysis and improve workflow. Voice recognition helps doctors dictate reports more efficiently, and some also use ChatGPT for grammar checks. Research in the department includes using deep learning to speed up MRI scans, improve image quality, and assist in guiding catheters during interventions. \par
+
+\section*{2. Provide a description of the main medical technologies that are applied within the units}
+The department uses a 128 slice CT scanner with contrast injection for full brain imaging, along with 3 tesla and 7 tesla MRI scanners. The 3 tesla scanner is used for diagnostics, while the 7 tesla scanner is mainly reserved for research. Most imaging equipment is supplied by Siemens. Radiologists analyze scans using SECTRA, and patient data and reports are managed in EPIC. Each workstation includes three monitors: a high resolution screen for viewing images, SECTRA for image analysis, and EPIC for documentation. Voice recognition is used to speed up report dictation.\par
+\vspace{\baselineskip}
+\noindent
+In the operating area, live imaging is displayed on screens above the patient table and in the surgical control room, allowing continuous visual tracking during interventions. A low radiation tool (possibly fluoroscopy) is also used for real-time imaging, although its exact function was not fully explained, as the doctor had to assist the resident during a difficult procedure and the team did not have time to continue the discussion with us. Despite this, it was clear that the scanners and equipment were positioned intelligently throughout the unit to minimize travel time and improve efficiency during procedures.\par
+\vspace{\baselineskip}
+\noindent
+Calantic Digital Solutions, developed by Bayer, offers a cloud based platform with 13 AI applications used in clinical routines. These apps support tasks like detecting lesions, measuring tumors, and tracking abnormalities with color coded overlays. While not all apps are equally effective or regularly used, they are available as part of the platform and can be selectively activated depending on clinical needs. \par
+
+\section*{3. Describe the current state of AI-related research in the specific clinical field (select one topic)}
+AI is already supporting stroke diagnosis in neuroradiology by detecting large vessel occlusions and analyzing how contrast fluid flows through the brain. These tools help estimate which areas of the brain are damaged or still recoverable, allowing faster treatment decisions. During the visit, we saw how the Calantic system could track changes in lesion size across imaging timepoints. This helps highlight subtle tumor growth that might be missed by the human eye, supporting early intervention and monitoring. AI-based tools also segment brain tissue, measure atrophy, and assist in predicting patient outcomes after stroke. While effective for large or well-defined abnormalities, these systems are still being improved to handle small bleeds or complex patterns more reliably \autocite{InRa}. \par
+
+\section*{4. Describe one potential use case for AI applications that are currently not implemented into the workflows}
+One area where AI could add real value is in catheter navigation during neurointerventions. These procedures require guiding a catheter through narrow, curved vessels in the brain, which can be technically demanding and mentally exhausting. Currently, the process relies heavily on the operator’s experience and constant visual feedback from live fluoroscopy. In our visit, we observed how even experienced doctors faced difficulty during catheter manipulation, requiring assistance mid-procedure.\par
+\vspace{\baselineskip}
+\noindent
+An AI-based system that learns from large procedural datasets and overlays 3D imaging data onto live fluoroscopy could suggest optimal navigation paths in real time—like a virtual “shadow hand” that guides movement or warns against risky vessel routes. According to \cite{InRa}, such systems are already being explored and could one day act as assistive tools in complex anatomy or training settings. \par
+
+% References Section on Page 4
+% \newpage
+\printbibliography
+
+\end{document}
