@@ -68,7 +68,8 @@
 % BibLaTeX with Vancouver style
 \usepackage[
   backend=biber,
-  style=numeric,
+  style=numeric-comp,
+  sorting=none,
   citestyle=numeric
 ]{biblatex}
 \addbibresource{references.bib}
@@ -110,12 +111,13 @@
 	\end{textblock*}
 	\begin{center}
 		\vspace*{2cm}
+    \Huge{\textbf{Essay:}}\\
 		\Huge{\textbf{Trustworthy Large Language Models for Clinical Decision Support}}\\
     \vspace{3em}
-		\Large{Trustworthy AI in Medicine}\\
+		\Large{Clinical Decision Support}\\
     \vspace{0.5em}
-    \normalsize Master of Science in Artificial Intelligence in Medicine,
-University of Bern\\
+    \normalsize Master of Science in Artificial Intelligence in Medicine\\
+    \normalsize University of Bern\\
 		\vspace{10em}
         \Large{Carla Paloma Malo Nivon}\\
         \vspace{0.5em}
@@ -178,6 +180,9 @@ Damit diese und andere Arbeiten auf Plagiate überprüft werden können, erklär
 
 % Start of Questions Section on Page 2
 \newpage
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 % Text.\autocite{citationkey}
 % \par
 % \vspace{\baselineskip}
