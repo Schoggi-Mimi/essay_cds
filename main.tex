@@ -121,7 +121,7 @@
 		\vspace{10em}
         \Large{Carla Paloma Malo Nivon}\\
         \vspace{0.5em}
-        \normalsize Matriculation number: \\
+        \normalsize Matriculation number: 24-110-066\\
         \vspace{4em}
         \Large{Choekyel Nyungmartsang}\\
         \vspace{0.5em}
@@ -202,10 +202,10 @@ LLMs have advanced quickly since the transformer design made large-scale text le
 The first wave of general models was led by ChatGPT, trained on broad web data. It drew attention in medicine when it scored at or near the pass mark on all three steps of the United States Medical Licensing Exam (USMLE) even without special medical tuning \autocite{ChatGPT}. Although the test used sample questions, the result showed that a text model can recall much of the knowledge doctors learn in school.\par
 \vspace{\baselineskip}
 \noindent
-Researchers soon built health-specific models. Google’s Med-PaLM and the newer Med-PaLM 2, trained on large sets of medical questions, reached 67 \% and later 86 \% accuracy on USMLE-style tests, becoming the first to beat the human pass threshold with room to spare \autocite{MedPalm}. In work with clinical notes, GatorTron grew to 8.9 billion parameters and learned from ninety billion words of anonymised electronic health records, improving performance on five main language tasks such as concept extraction and inference \autocite{LLM}.\par
+Researchers soon built health-specific models, tailored to different types of medical data. For instance, Med-PaLM and its successor Med-PaLM 2, trained on structured question-answer datasets, achieved 67 \% and later on 86 \% accuracy on USMLE-style medical exams, surpassing the human pass threshold \autocite{MedPalm}. In contrast, GatorTron, trained on a massive corpus of 90 billion words from unstructured EHRs, scaled up to 8.9 billion parameters. It outperformed previous biomedical and clinical transformers on all five clinical NLP tasks such as concept extraction and inference \autocite{LLM}.\par
 \vspace{\baselineskip}
 \noindent
-To compare these systems fairly, teams created MultiMedQA, a benchmark that blends six exam and consumer datasets with new web health queries. Human reviewers then score answers for factual correctness, reasoning, and possible harm, exposing weaknesses that simple accuracy numbers can miss \autocite{LLM2}.
+To compare these systems fairly, several benchmarks have been proposed, like MultiMedQA, that blends 6 medical licensing exams and a consumer dataset with new web health queries. Human reviewers then score answers for factual correctness, reasoning, and possible harm, exposing weaknesses that simple accuracy numbers can miss \autocite{LLM2}.
 
 \section*{Ethical barriers to trustworthy LLMs}
 Research shows that language models can pass medical exams, but real-world care still brings serious risks. The five issues that follow hallucinations, bias, privacy leaks, lack of explanation, and loss of public trust, separate current early systems from safe daily use. Each subsection sets out the problem, offers evidence, and explains why it matters for patients and clinicians.
@@ -245,7 +245,7 @@ Bad news spreads quickly. A 2024 Nature Medicine survey asked people how much th
 Clinicians are the first to handle LLM output, and patients depend on the advice that follows. Responsibility for care still rests with the human professional, so every AI suggestion needs a quick but careful review. The extra time spent checking can extend visits, and patients notice the delay. A 2024 Nature Medicine survey found that many people trust medical advice less once they learn an AI helped, even when the answer is correct \autocite{Advice}. When hallucinations, bias, or data leaks slip through, trust can collapse and workloads can rise instead of fall.\par
 \vspace{\baselineskip}
 \noindent
-Regulators are acting in parallel. The EU AI Act puts clinical decision support in the high-risk category, which means outside audits, full trace records, and clear proof of safety are required before launch \autocite{EUAIAct}. For developers this means privacy by design, clear uncertainty flags, and public test reports are now expected. Without these steps, public concern can keep even the best tools out of daily use.
+Regulators are acting in parallel. The EU AI Act puts clinical decision support in the high-risk category, which means external audits, full trace records, and clear proof of safety are required before launch \autocite{EUAIAct}. For developers this means privacy by design, clear uncertainty flags, and public test reports are now expected. Without these steps, public concern can keep even the best tools out of daily use.
 
 \section*{Conclusion}
 LLMs will not earn a place in clinical care until five gaps close: fewer hallucinations, regular bias checks, strong privacy protection, clear explanations, and open error reports. Each fix is within reach. Benchmarks such as MultiMedQA now measure reasoning and potential harm, giving teams a clear target. The EU AI Act already lists decision support as high risk, so builders must show safety data before release. Local deployment, retrieval-augmented design, and simple uncertainty flags are reducing mistakes in trial units.\par
