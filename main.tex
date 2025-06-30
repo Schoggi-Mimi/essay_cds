@@ -107,10 +107,14 @@
 
 % Title Page
 \begin{titlepage}
+  \begin{flushright}
+    \includegraphics[width=5.5cm]{university_logo.png} % Adjust width as needed
+  \end{flushright}
+  % \vspace{2cm}
 	\begin{textblock*}{5cm}[0,0](6.6cm,11.0cm)
 	\end{textblock*}
 	\begin{center}
-		\vspace*{2cm}
+		\vspace*{0.5cm}
     \Huge{\textbf{Essay:}}\\
 		\Huge{\textbf{Trustworthy Large Language Models for Clinical Decision Support}}\\
     \vspace{3em}
@@ -118,7 +122,7 @@
     \vspace{0.5em}
     \normalsize Master of Science in Artificial Intelligence in Medicine\\
     \normalsize University of Bern\\
-		\vspace{10em}
+		\vspace{5em}
         \Large{Carla Paloma Malo Nivon}\\
         \vspace{0.5em}
         \normalsize Matriculation number: 24-110-066\\
@@ -132,49 +136,6 @@
     
 	\end{center}
  
-\newpage
-
-\thispagestyle{empty}
-\begin{flushright}
-    \includegraphics[width=5.5cm]{university_logo.png} % Adjust width as needed
-\end{flushright}
-\vspace{2cm}
-\section*{Eigenständigkeitserklärung}
-{\small
-Hiermit versichern wir, dass wir die Arbeit mit dem Titel
-
-\vspace{1cm}
-\noindent
-\rule{\textwidth}{0.5pt}
-\noindent
-eigenständig und nur mit den angegebenen Hilfsmitteln verfasst haben. Alle Texte, derer wir uns bedient haben, inklusive Quellen aus dem Internet, haben wir im Literaturverzeichnis aufgeführt. Wörtliche Übernahmen von Textpassagen Anderer haben wir als wörtliche Zitate gekennzeichnet. Wir haben auch die paraphrasierende Wiedergabe oder freie Übernahme fremder Gedanken durch Verweis auf einen Originaltext belegt. Falls wir Werkzeuge und Dienste der künstlichen Intelligenz eingesetzt haben oder die Arbeit von anderen Menschen haben gegenlesen lassen, haben wir dies in der Arbeit ausgewiesen. Wir versichern, dass die vorliegende Arbeit trotz Einsatz der etwaig aufgeführten Hilfsmittel und Unterstützungen im Wesentlichen unsere eigene Leistung ist.
-
-\par
-\vspace{\baselineskip}
-\noindent
-Uns ist bewusst, dass ein Verstoss gegen diese Vorgaben den Regeln der guten wissenschaftlichen Praxis widerspricht und ein Plagiat darstellt, das nach Richtlinien der Universität Bern geahndet werden kann.
-
-\par
-\vspace{\baselineskip}
-\noindent
-Damit diese und andere Arbeiten auf Plagiate überprüft werden können, erklären wir uns damit einverstanden, dass die Universität Bern diese Arbeit mit einer Plagiatssoftware überprüft und in einer Datenbank speichert, mit deren Hilfe zukünftige Arbeiten auf Plagiate überprüft werden können.
-
-\vspace{1.5cm}
-\noindent
-\begin{tabularx}{\textwidth}{@{}lX}
-	&\\
-	Bern, \today &  \\
-	\cline{2-2}
-\end{tabularx}
-
-\vspace{1.5cm}
-\noindent
-\begin{tabularx}{\textwidth}{@{}lX}
-	&\\
-	Bern, \today &  \\
-	\cline{2-2}
-\end{tabularx}
-}
 \pagenumbering{gobble}
 \end{titlepage}
 
@@ -242,7 +203,7 @@ Bad news spreads quickly. A 2024 Nature Medicine survey asked people how much th
 
 
 \section*{Implications for key stakeholders}
-Clinicians are the first to handle LLM output, and patients depend on the advice that follows. Responsibility for care still rests with the human professional, so every AI suggestion needs a quick but careful review. The extra time spent checking can extend visits, and patients notice the delay. A 2024 Nature Medicine survey found that many people trust medical advice less once they learn an AI helped, even when the answer is correct \autocite{Trust}. When hallucinations, bias, or data leaks slip through, trust can collapse and workloads can rise instead of fall.\par
+Clinicians are the first to handle LLM output, and patients depend on the advice that follows. Responsibility for care still rests with the human professional, so every AI suggestion needs a quick but careful review. The extra time spent checking can extend visits, and patients notice the delay. The same survey found that many people trust medical advice less once they learn an AI helped, even when the answer is correct \autocite{Trust}. When hallucinations, bias, or data leaks slip through, trust can collapse and workloads can rise instead of fall.\par
 \vspace{\baselineskip}
 \noindent
 Regulators are acting in parallel. The EU AI Act puts clinical decision support in the high-risk category, which means external audits, full trace records, and clear proof of safety are required before launch \autocite{EUAIAct}. For developers this means privacy by design, clear uncertainty flags, and public test reports are now expected. Without these steps, public concern can keep even the best tools out of daily use.
