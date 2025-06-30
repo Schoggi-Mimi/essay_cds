@@ -224,10 +224,10 @@ When a model repeats bias, the harm can spread quickly. Skewed dose or triage ad
 
 
 \subsection*{C. Privacy and data security}
-Language models keep traces of the text they saw during training. If that text includes real patient notes, skilled users can pull private facts back out. A 2024 Nature study showed that even after names and dates were removed, an attacker could ask short probe questions and learn whether a patient’s record had been in the training set \autocite{Privacy}.\par
+Language models keep traces of the text they saw during training. If that text includes real patient notes, skilled users can pull private facts back out. A 2024 Nature study showed that even after names and dates were removed, an attacker could ask short probe questions and learn whether a patients record had been in the training set \autocite{Privacy}.\par
 \vspace{\baselineskip}
 \noindent
-Leaks break laws like the General Data Protection Regulation (GDPR) and the Health Insurance Portability and Accountability Act (HIPAA) and can harm patients far beyond the clinic. A revealed HIV status or rare-disease note could hurt a person’s chance to get insurance or a job. Fear of such leaks may also stop hospitals from sharing data that is needed to train fairer models. Technical fixes like local hospital deployment, differential-privacy noise, and strict logging are under study, but none fully block the risk yet \autocite{Privacy2}. Until clear guardrails show that no sensitive text can escape, privacy worries will limit how far LLMs can move into everyday clinical work.
+Leaks break laws like the General Data Protection Regulation (GDPR) and the Health Insurance Portability and Accountability Act (HIPAA) and can harm patients far beyond the clinic. A revealed HIV status or rare-disease note could hurt a persons chance to get insurance or a job. Fear of such leaks may also stop hospitals from sharing data that is needed to train fairer models. Technical fixes like local hospital deployment, differential-privacy noise, and strict logging are under study, but none fully block the risk yet \autocite{Privacy2}. Until clear guardrails show that no sensitive text can escape, privacy worries will limit how far LLMs can move into everyday clinical work.
 
 
 \subsection*{D. Lack of explainability}
@@ -242,7 +242,7 @@ Bad news spreads quickly. A 2024 Nature Medicine survey asked people how much th
 
 
 \section*{Implications for key stakeholders}
-Clinicians are the first to handle LLM output, and patients depend on the advice that follows. Responsibility for care still rests with the human professional, so every AI suggestion needs a quick but careful review. The extra time spent checking can extend visits, and patients notice the delay. A 2024 Nature Medicine survey found that many people trust medical advice less once they learn an AI helped, even when the answer is correct \autocite{Advice}. When hallucinations, bias, or data leaks slip through, trust can collapse and workloads can rise instead of fall.\par
+Clinicians are the first to handle LLM output, and patients depend on the advice that follows. Responsibility for care still rests with the human professional, so every AI suggestion needs a quick but careful review. The extra time spent checking can extend visits, and patients notice the delay. A 2024 Nature Medicine survey found that many people trust medical advice less once they learn an AI helped, even when the answer is correct \autocite{Trust}. When hallucinations, bias, or data leaks slip through, trust can collapse and workloads can rise instead of fall.\par
 \vspace{\baselineskip}
 \noindent
 Regulators are acting in parallel. The EU AI Act puts clinical decision support in the high-risk category, which means external audits, full trace records, and clear proof of safety are required before launch \autocite{EUAIAct}. For developers this means privacy by design, clear uncertainty flags, and public test reports are now expected. Without these steps, public concern can keep even the best tools out of daily use.
